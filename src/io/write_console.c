@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   write_console.c                                    :+:      :+:    :+:   */
+/*   write_console.c */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lu-value <lu-value@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "../../includes/utility_library.h"
 #include <stdio.h>
 
 static int	write_bytes(int fd, const char *buffer, size_t len)
@@ -83,14 +83,14 @@ static int	write_prefix(int fd, const char *label, const char *color)
 {
 	int	count;
 
-	count = ft_strlen(color) + ft_strlen(label)
-		+ ft_strlen(CONSOLE_COLOR_RESET) + 3;
-	if (write_bytes(fd, color, ft_strlen(color)) < 0
+	count = string_length(color) + string_length(label)
+		+ string_length(CONSOLE_COLOR_RESET) + 3;
+	if (write_bytes(fd, color, string_length(color)) < 0
 		|| write_bytes(fd, "[", 1) < 0
-		|| write_bytes(fd, label, ft_strlen(label)) < 0
+		|| write_bytes(fd, label, string_length(label)) < 0
 		|| write_bytes(fd, "]", 1) < 0
 		|| write_bytes(fd, CONSOLE_COLOR_RESET,
-			ft_strlen(CONSOLE_COLOR_RESET)) < 0
+			string_length(CONSOLE_COLOR_RESET)) < 0
 		|| write_bytes(fd, "\n", 1) < 0)
 		return (-1);
 	return (count);
