@@ -16,9 +16,10 @@ The goal is to keep the library readable when reused in later projects.
 
 ## Norminette
 
-This refactor is no longer designed to strictly pass the 42 norminette. As the
-curriculum progresses, the library may evolve with different structures,
-helpers, and organization choices that prioritize reuse and clarity.
+This refactor is no longer designed to strictly pass the 42 norminette. As I
+move forward in the curriculum, this library changes with my needs: I optimize
+parts of it, change internal structures, and add new helpers when they become
+useful for later projects.
 
 ## Instructions
 
