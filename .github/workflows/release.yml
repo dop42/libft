@@ -9,8 +9,8 @@ permissions:
   contents: write
 
 jobs:
-  build-linux:
-    name: Build Linux utility library
+  build:
+    name: Build utility library
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -19,10 +19,10 @@ jobs:
       - name: Build utility library
         run: make re
 
-  release-linux:
-    name: Publish Linux utility library release
+  release:
+    name: Publish utility library release
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    needs: build-linux
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -31,11 +31,11 @@ jobs:
       - name: Build release artifact
         run: make re
 
-      - name: Create Linux release
+      - name: Create release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v1.0.${{ github.run_number }}-linux
-          name: Release v1.0.${{ github.run_number }}-linux
+          tag_name: v1.0.${{ github.run_number }}
+          name: Release v1.0.${{ github.run_number }}
           files: |
             utility_library.a
             includes/utility_library.h
