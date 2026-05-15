@@ -1,17 +1,24 @@
-*This project has been created as part of the 42 curriculum by lmouta-g.*
-
----
+# C Utility Library
 
 ## Description
 
-**libft** is a custom C library project from the 42 curriculum.
-The goal is to rebuild a set of standard C library functions, along with additional utility functions that can be reused in future projects.
+This project is a reusable C utility library based on the 42 library exercise,
+with explicit function and file names.
 
-This library includes string manipulation, memory handling, character checks, linked list utilities, file descriptor output helpers, `get_next_line`, and `ft_printf`.
+It contains helpers for:
 
-This project introduces low-level memory management, pointer manipulation, linked lists, variadic functions, and general C library design.
+- character checks and conversions;
+- memory and string handling;
+- linked lists, output helpers, formatted printing, and line reading.
+- fixed-size arena allocation.
 
----
+The goal is to keep the library readable when reused in later projects.
+
+## Norminette
+
+This refactor is no longer designed to strictly pass the 42 norminette. As the
+curriculum progresses, the library may evolve with different structures,
+helpers, and organization choices that prioritize reuse and clarity.
 
 ## Instructions
 
@@ -21,47 +28,69 @@ This project introduces low-level memory management, pointer manipulation, linke
 make
 ```
 
-This generates one static library:
+Useful rules:
 
-* `libft.a`
+```bash
+make clean
+make fclean
+make re
+```
+
+The build creates:
+
+```text
+utility_library.a
+```
 
 ### Usage
 
-1. Build the library:
-
-```bash
-make
-```
-
-2. Include the header in your project:
+Include the header:
 
 ```c
-#include "libft.h"
+#include "utility_library.h"
 ```
 
-3. Compile your program with the library:
+Compile with the static library:
 
 ```bash
-cc main.c -L. -lft -I includes
+cc main.c utility_library.a -I includes
 ```
-
----
 
 ## Structure
 
-The source files are organized by category:
+```text
+includes/utility_library.h
+src/ctype
+src/stdlib
+src/string
+src/memory
+src/io
+src/list
+src/printf
+src/arena
+src/extra
+```
 
-* `src/ctype`
-* `src/stdlib`
-* `src/string`
-* `src/memory`
-* `src/io`
-* `src/list`
-* `src/printf`
-* `src/extra`
+## Naming
 
----
+The public API uses descriptive names.
 
-## Resources
+Examples:
 
-- I don't remember using any specific resources for this project. I think I mostly searched online and read 42 PDFs :D
+```text
+string_length
+duplicate_string
+string_to_int
+print_formatted
+create_node
+copy_memory
+get_next_line
+create_arena
+arena_alloc
+arena_zalloc
+destroy_arena
+```
+
+## Credits
+
+The arena allocator was inspired by Axel Margo's arena-lib: https://github.com/Axel-Margo/arena-lib.
