@@ -10,17 +10,17 @@ permissions:
 
 jobs:
   build-linux:
-    name: Build Linux library
+    name: Build Linux utility library
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build libft
+      - name: Build utility library
         run: make re
 
   release-linux:
-    name: Publish Linux release
+    name: Publish Linux utility library release
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: build-linux
     runs-on: ubuntu-latest
@@ -37,5 +37,5 @@ jobs:
           tag_name: v1.0.${{ github.run_number }}-linux
           name: Release v1.0.${{ github.run_number }}-linux
           files: |
-            libft.a
-            includes/libft.h
+            utility_library.a
+            includes/utility_library.h
