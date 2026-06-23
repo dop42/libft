@@ -10,17 +10,17 @@ permissions:
 
 jobs:
   build:
-    name: Build utility library
+    name: Build libft
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build utility library
+      - name: Build libft
         run: make re
 
   release:
-    name: Publish utility library release
+    name: Publish libft release
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
