@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/utility_library.h"
+#include "../../includes/libft.h"
 
 char	*find_last_char(const char *str, int c)
 {

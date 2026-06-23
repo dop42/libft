@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/utility_library.h"
+#include "../../includes/libft.h"
 
 /**
  * destroy_arena - frees an arena and its backing buffer.

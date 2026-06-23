@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utility_library.h                                  :+:      :+:    :+:   */
+/*   libft.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmouta-g <lmouta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 13:48:18 by lm0uta            #+#    #+#             */
-/*   Updated: 2026/02/19 12:08:25 by lmouta-g         ###   ########.fr       */
+/*   Updated: 2026/06/23 16:52:29 by lmouta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILITY_LIBRARY_H
-# define UTILITY_LIBRARY_H
+#ifndef LIBFT_H
+# define LIBFT_H
 
 # include <stddef.h>
 # include <stdarg.h>

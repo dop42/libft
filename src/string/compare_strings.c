@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/utility_library.h"
+#include "../../includes/libft.h"
 
 int	compare_strings(const char *s1, const char *s2, size_t n)
 {

@@ -40,7 +40,7 @@ make re
 The build creates:
 
 ```text
-utility_library.a
+libft.a
 ```
 
 ### Usage
@@ -48,19 +48,19 @@ utility_library.a
 Include the header:
 
 ```c
-#include "utility_library.h"
+#include "libft.h"
 ```
 
 Compile with the static library:
 
 ```bash
-cc main.c utility_library.a -I includes
+cc main.c libft.a -I includes
 ```
 
 ## Structure
 
 ```text
-includes/utility_library.h
+includes/libft.h
 src/ctype
 src/stdlib
 src/string

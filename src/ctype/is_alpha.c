@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/utility_library.h"
+#include "../../includes/libft.h"
 
 int	is_alpha(int c)
 {

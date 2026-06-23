@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/utility_library.h"
+#include "../../includes/libft.h"
 
 int	compare_memory(const void *s1, const void *s2, size_t n)
 {

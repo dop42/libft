@@ -1,4 +1,4 @@
-NAME = utility_library.a
+NAME = libft.a
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -66,7 +66,7 @@ SRCS = stdlib/string_to_int.c \
 
 SRCS := $(addprefix $(SRC_DIR)/,$(SRCS))
 OBJS = $(SRCS:.c=.o)
-HEADER = $(INC_DIR)/utility_library.h
+HEADER = $(INC_DIR)/libft.h
 
 all: $(NAME)
 

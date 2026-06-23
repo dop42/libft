@@ -37,5 +37,5 @@ jobs:
           tag_name: v1.0.${{ github.run_number }}
           name: Release v1.0.${{ github.run_number }}
           files: |
-            utility_library.a
-            includes/utility_library.h
+            libft.a
+            includes/libft.h
