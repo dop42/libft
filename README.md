@@ -91,7 +91,3 @@ arena_alloc
 arena_zalloc
 destroy_arena
 ```
-
-## Credits
-
-The arena allocator was inspired by Axel Margo's arena-lib: https://github.com/Axel-Margo/arena-lib.
