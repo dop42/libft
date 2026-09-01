@@ -1,4 +1,14 @@
-*This project has been created as partof the 42 curriculum by lmouta-g (dop42).*
+# libft
+
+<p>
+  <img src="https://img.shields.io/badge/language-C-00599C?style=flat-square&logo=c&logoColor=white" alt="C">
+  <img src="https://img.shields.io/badge/output-libft.a-4c1?style=flat-square" alt="libft.a">
+  <img src="https://img.shields.io/badge/flags--Wall%20--Wextra%20--Werror-4c1?style=flat-square" alt="Flags">
+</p>
+
+*This project has been created as part of the 42 curriculum by lmouta-g (dop42).*
+
+---
 
 ## Description
 
@@ -9,7 +19,7 @@ It contains helpers for:
 
 - character checks and conversions;
 - memory and string handling;
-- linked lists, output helpers, formatted printing, and line reading.
+- linked lists, output helpers, formatted printing, and line reading;
 - fixed-size arena allocation.
 
 The goal is to keep the library readable when reused in later projects.
@@ -20,6 +30,8 @@ This refactor is no longer designed to pass the 42 moulinette. As I move
 forward in the curriculum, this library changes with my needs: I optimize parts
 of it, change internal structures, and add new helpers when they become useful
 for later projects.
+
+---
 
 ## Instructions
 
@@ -57,20 +69,24 @@ Compile with the static library:
 cc main.c libft.a -I includes
 ```
 
+---
+
 ## Structure
 
 ```text
 includes/libft.h
-src/ctype
-src/stdlib
-src/string
-src/memory
-src/io
-src/list
-src/printf
-src/arena
-src/extra
+src/ctype     character checks and conversions
+src/stdlib    conversions and general helpers
+src/string    string handling
+src/memory    memory handling
+src/io        output helpers and get_next_line
+src/list      linked lists
+src/printf    formatted printing
+src/arena     fixed-size arena allocation
+src/extra     additional helpers
 ```
+
+---
 
 ## Naming
 
@@ -91,3 +107,9 @@ arena_alloc
 arena_zalloc
 destroy_arena
 ```
+
+---
+
+## Used by
+
+- [**minishell**](https://github.com/dop42/minishell) — a Unix shell in C.
